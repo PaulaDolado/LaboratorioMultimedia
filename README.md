@@ -1,2 +1,3 @@
 Practicas de laboratorio mulimedia utilizando html, javascript, jquery...
- # P1: Juego de memoria (cartas).
+ # P1: Juego de memoria.
+ # P2: Juego de Breakout.
