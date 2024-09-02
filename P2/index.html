@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BreakOut 23-24</title>
+    <link rel="stylesheet" href="css\estils.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/introjs.min.css">
+</head>
+<html>
+<body>
+    
+    <div class="music-controls">
+        <i id="mc-back" class="bi bi-skip-backward-fill"></i>
+        <i id="mc-main" class="bi bi-pause-circle-fill"></i>
+        <i id="mc-forw" class="bi bi-skip-forward-fill"></i>
+    </div>
+
+    <div class="left-controls">
+        <i id="mc-mute" class="bi bi-volume-up-fill"></i>
+        <i id="ayuda" class="bi bi-question-circle-fill"></i>
+    </div>
+
+    <div class="ranking-wrap">
+        <div id="ranking">
+            <i id="ranking-close" class="bi bi-x-lg"></i>
+            <h1>Ranking</h1>
+            <p style="margin: 1rem auto;">No hi ha cap puntuació registrada</p>
+            <table class="hidden" id="ranking-inner">
+                <tbody>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Punts</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="principal">
+        <div id="menu" class="dialogoMenu">
+            <div id="contenidoMenu" class="contenidoMenu">
+                <div class="menu-header">Seleccione un nivel de dificultad</div>
+                <div id="menu-body" class="menu-body">
+                    <div id="dificultadBtn" class="menu-body">
+                        <button id="facil" class="btn">Fácil</button>
+                        <button id="medio" class="btn">Medio</button>
+                        <button id="dificil" class="btn">Difícil</button>
+                    </div>
+                </div>
+
+                <img id="leaderboard" class="lb-icon" src="images/podium.svg">
+            </div>
+        </div>   
+
+        
+        <div style="position: relative;">
+            <canvas id="joc" width="740" height="400"></canvas>
+            <div id="vides">
+                <i class="bi bi-heart-fill" id = "vida1"></i>
+                <i class="bi bi-heart-fill" id = "vida2"></i>
+                <i class="bi bi-heart-fill" id = "vida3"></i>
+            </div>
+            <span id="punts">000</span>
+            <div id="finestraWin" class="finestra">
+                <div class="contingut">
+                    <h1>¡Enorabuena! ¡Has ganado!</h1>
+                    <p class="completado"></p>                    
+                    <div class="nom">
+                        <span>Escriba su nombre: </span>
+                        <input type="text">
+                    </div>
+                    
+                    <button class="btn" id ="reloadWin" style="margin-top: 1rem;">Volver a jugar</button> 
+                </div>
+            </div>
+            <div id="finestraLose" class="finestra">
+                <div class="contingut">
+                    <h1>¡Una lástima! ¡Has perdido!</h1>
+                    <p>Has agotado todas tus vidas.</p>
+
+                    <p class="completado"></p>
+
+                    <div class="nom">
+                        <span>Escriba su nombre: </span>
+                        <input type="text">
+                    </div>
+
+                    <button class="btn" id ="reloadLose" style="margin-top: 1rem;">Volver a jugar</button> 
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+</body>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/joc.js"></script>
+<script src="js/bola.js"></script>
+<script src="js/punt.js"></script>
+<script src="js/pala.js"></script>
+<script src="js/totxo.js"></script>
+<script src="js/mur.js"></script>
+<script src="js/segment.js"></script>
+<script src="js/ranking.js"></script>
+<script src="js/app.js"></script>
+<script src="js/introjs.min.js"></script>
+<script src="js/musica.js"></script>
+</html>
